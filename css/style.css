@@ -156,6 +156,120 @@ body {
       }
     }
 
+/* يخلي السكشن في نص الصفحة وياخد عرض مناسب */
+.mg-section {
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.mg-box {
+  width: 100%;
+  max-width: 1100px; /* نفس تقريباً عرض الموقع */
+}
+
+/* شريط التبويبات */
+.mg-tabs {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;      /* حجم الخط للتبويبات */
+  font-weight: 500;
+  color: #9ca3af;
+  border-bottom: none;  /* نشيل خط Bootstrap الافتراضي */
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* خط رمادي تحت كل التبويبات */
+.mg-tabs-line {
+  height: 1px;
+  background: #e5e7eb;
+  margin-bottom: 32px;
+}
+
+/* أزرار التبويب */
+.mg-tabs .nav-link {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: #9ca3af;
+  padding: 0;
+  padding-bottom: 8px;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+/* Hover */
+.mg-tabs .nav-link:hover {
+  color: #4f46e5;
+}
+
+/* التبويب النشط */
+.mg-tabs .nav-link.active {
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+/* الخط البنفسجي تحت التبويب النشط */
+.mg-tabs .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -11px;              /* مستوى الخط */
+  left: 50%;                 /* نقطة البداية من منتصف العنصر */
+  transform: translateX(-50%) ; 
+  /* -50% يخليه بالسنتر
+     scaleX(1.7) تطول الخط 70% أكثر من عرض الكلمة */
+
+  width:210px;               /* لازم 100% عشان scaleX يشتغل بشكل صحيح */
+  height: 2px;
+  background: #4f46e5;
+  border-radius: 999px;
+}
+.mg-tabs .nav-link.active.ss::after{
+    transform: translateX(-30%) ; 
+
+}
+
+
+/* محتوى السكشن */
+.mg-tab-content {
+  font-size: 14px;
+}
+
+/* الكرت الواحد */
+.mg-card {
+  padding: 4px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.mg-card:hover {
+  transform: translateY(-4px);
+  background: transparent !important;
+}
+
+/* عنوان كل feature */
+.mg-feature-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #6366f1;
+  margin-bottom: 4px;
+}
+
+/* الوصف */
+.mg-feature-desc {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* موبايل */
+@media (max-width: 768px) {
+  .mg-tabs {
+    font-size: 18px;
+    gap: 16px;
+  }
+}
 
 /* ===== Footer Styles ===== */
 .footer {
