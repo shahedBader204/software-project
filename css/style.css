@@ -156,8 +156,288 @@ body {
       }
     }
 
+/* ===== Integrations Section ===== */
+
+.mg-integrations {
+  padding: 100px 0 140px;
+  background: white;
+}
+
+.mg-integrations .container {
+  max-width: 1200px;
+}
+
+/* اليسار: العنوان والنص */
+.mg-int-title {
+  font-size: 44px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 18px;
+}
+
+.mg-int-text {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #6b7280;
+  max-width: 460px;
+  margin-bottom: 30px;
+}
+
+/* حبات اللوغوهات الصغيرة */
+.mg-tool-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.mg-tool-pill {
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 8px 18px;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mg-tool-pill img {
+  display: block;
+  max-height: 24px;
+}
+
+/* تأثير بسيط عند المرور */
+.mg-tool-pill:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.16);
+}
+
+/* زر Start for Free */
+.mg-cta-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 38px;
+  border-radius: 999px;
+  border: 2px solid #6366f1;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 18px 36px rgba(79, 70, 229, 0.45);
+}
+
+.mg-cta-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+/* الدائرة اللي فيها السهم */
+.mg-cta-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4f46e5;
+  font-size: 16px;
+}
+
+/* لمعة بيضا تمشي وتروح */
+.mg-cta-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0)
+  );
+  transform: skewX(-20deg);
+  opacity: 0;
+}
+
+.mg-cta-btn:hover::before {
+  animation: mg-shine 0.7s forwards;
+}
+
+@keyframes mg-shine {
+  0% {
+    left: -40%;
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    left: 140%;
+    opacity: 0;
+  }
+}
+
+/* اليمين: الكروت الكبيرة اللي بتطلع وتنزل */
+.mg-int-right {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.mg-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  animation: mg-scroll 14s linear infinite;
+}
+
+/* نكرر الكروت عشان يصير سكروول لا نهائي */
+.mg-card-list .mg-big-card {
+  background: #f9fafb;
+  border-radius: 40px;
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.16);
+  padding: 34px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 190px;
+}
+
+/* داخل الكرت */
+.mg-card-logo {
+  font-size: 32px;
+  font-weight: 600;
+  color: #111827;
+  text-align: center;
+}
+
+.mg-card-logo img {
+  max-height: 48px;
+  display: block;
+}
+
+/* حركة السكروول */
+@keyframes mg-scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* موبايل */
+@media (max-width: 992px) {
+  .mg-int-title {
+    font-size: 34px;
+  }
+  .mg-integrations {
+    padding-top: 60px;
+  }
+  .mg-int-right {
+    margin-top: 40px;
+  }
+}
 
     
+.mg-int-right {
+  display: flex;
+  justify-content: center;
+}
+
+/* شبكتين فوق بعض زي الموقع */
+.mg-card-grid {
+  display: flex;
+  gap: 26px;
+  max-width: 480px;
+}
+
+/* كل عمود فيه كروت تتحرك عمودي */
+.mg-card-column {
+  width: 220px;
+  height: 420px;
+  overflow: hidden;
+  position: relative;
+  background: white !important;   /* ← أهم سطر */
+}
+
+
+
+/* قائمة الكروت داخل العمود (نكررها عشان الحركة لا نهائية) */
+.mg-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  animation: mg-scroll 14s linear infinite;
+}
+
+/* العمود الثاني يتحرك بسرعة/اتجاه مختلف شوي */
+.mg-card-column.right .mg-card-list {
+  animation-duration: 18s;
+  animation-direction: reverse;
+}
+
+/* الكرت الكبير الواحد */
+.mg-big-card {
+  background: #f9fafb;
+  border-radius: 40px;
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.18);
+  padding: 34px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 190px;
+}
+
+/* محتوى الكرت = صورة الشعار */
+.mg-card-logo img {
+  max-height: 48px;      /* عدليها لو حسيتي الشعار صغير/كبير */
+  display: block;
+}
+
+/* حركة الكروت (تطلع وتختفي ويجي غيرها) */
+@keyframes mg-scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* موبايل */
+@media (max-width: 992px) {
+  .mg-card-grid {
+    max-width: 100%;
+  }
+}
+.mg-int-right,
+.mg-card-grid,
+.mg-card-column,
+.mg-card-list {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+.mg-card-column {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.mg-int-right {
+    overflow: visible !important;
+}
+
+
     /* ===== FAQ SECTION ===== */
     .faq-section {
       padding: 80px 16px 50px;
