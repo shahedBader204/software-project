@@ -302,6 +302,7 @@ body {
   animation: mg-scroll 14s linear infinite;
 }
 
+
 /* نكرر الكروت عشان يصير سكروول لا نهائي */
 .mg-card-list .mg-big-card {
   background: #f9fafb;
@@ -321,9 +322,15 @@ body {
   color: #111827;
   text-align: center;
 }
+.start_for{
+    text-decoration: none;
+color: white;
+}
+
 
 .mg-card-logo img {
   max-height: 48px;
+  max-width: 190px;
   display: block;
 }
 
@@ -402,7 +409,7 @@ body {
 
 /* محتوى الكرت = صورة الشعار */
 .mg-card-logo img {
-  max-height: 48px;      /* عدليها لو حسيتي الشعار صغير/كبير */
+  max-height: 42px;      /* عدليها لو حسيتي الشعار صغير/كبير */
   display: block;
 }
 
@@ -821,4 +828,30 @@ body {
         gap: 10px;
         text-align: center;
     }
+}
+/* ===== FIX الفراغ بين الكروت ===== */
+
+/* نخلي العمود نفسه أبيض */
+.mg-card-column {
+  background: #ffffff !important;
+}
+
+/* أي فراغ ناتج عن الحركة */
+.mg-card-list {
+  background: #ffffff !important;
+}
+
+/* pseudo elements لو موجودة */
+.mg-card-column::before,
+.mg-card-column::after,
+.mg-card-list::before,
+.mg-card-list::after {
+  content: none !important;
+}
+
+/* نخفف الظل أكثر عشان ما يعطي بقعة */
+.mg-big-card {
+  background: #ffffff !important;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06) !important;
+  border: 1px solid rgba(0, 0, 0, 0.04);
 }
