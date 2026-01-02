@@ -1,0 +1,74 @@
+.testimonials-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f9f9ff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #574eea;
+}
+
+.testimonial-slider {
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.testimonial-track {
+  display: flex;
+  animation: scroll-left 18s linear infinite;
+}
+
+.testimonial {
+  min-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.5s ease;
+}
+
+.testimonial p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.testimonial span {
+  color: #6c63ff;
+  font-weight: 600;
+}
+
+/* الحركة باتجاه اليسار */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(-300%); }
+}
