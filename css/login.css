@@ -1,0 +1,202 @@
+:root{
+      --bg: #efe7db;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --btn: #2f63ff;
+      --btn-hover: #2552d6;
+      --apple: #0f172a;
+    }
+
+    body{
+      margin:0;
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      background: radial-gradient(1200px 600px at 50% 30%, #f6efe6 0%, var(--bg) 55%, #e8dfd0 100%);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+      color: var(--text);
+    }
+
+    .auth-wrap{
+      width: min(420px, 92vw);
+      padding: 16px;
+    }
+
+    .auth-card{
+      background: var(--card);
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: 18px;
+      padding: 22px 20px;
+      box-shadow: 0 18px 45px rgba(0,0,0,.08);
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      margin-bottom: 14px;
+    }
+span.ai {
+      font-size: 12px;
+      color: #8b5cf6;
+      margin-left: 2px;
+      vertical-align: super;
+    }
+    .logo{
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display:grid;
+      place-items:center;
+      background: #8b5cf6;
+      color:#fff;
+      font-weight:700;
+      letter-spacing:.5px;
+      font-size: 14px;
+      padding-bottom: 5px;
+    }
+    .brand-name{
+      font-weight: 700;
+      font-size: 22px;
+    }
+    .brand-plus{
+      font-weight: 800;
+      font-size: 18px;
+      vertical-align: super;
+      margin-left: 2px;
+      color: #111827;
+    }
+
+    .pill-btn{
+      width:100%;
+      border-radius: 999px;
+      padding: 11px 14px;
+      font-weight: 600;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      border: 1px solid var(--border);
+      background:#fff;
+      color: var(--text);
+      transition: transform .05s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .pill-btn:hover{
+      box-shadow: 0 8px 18px rgba(0,0,0,.07);
+      background:#fbfbfb;
+    }
+    .pill-btn:active{ transform: scale(.99); }
+
+    .pill-btn.apple{
+      background: var(--apple);
+      color:#fff;
+      border-color: rgba(255,255,255,.12);
+    }
+    .pill-btn.apple:hover{ background: #111c33; }
+
+    .divider{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      margin: 12px 0 10px;
+    }
+    .divider::before,
+    .divider::after{
+      content:"";
+      height:1px;
+      flex:1;
+      background: var(--border);
+    }
+
+    .field{
+      margin-bottom: 12px;
+    }
+    .input{
+      width:100%;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 11px 14px;
+      outline: none;
+      background:#fff;
+      transition: box-shadow .2s ease, border-color .2s ease;
+      font-size: 14px;
+    }
+    .input:focus{
+      border-color: rgba(47,99,255,.45);
+      box-shadow: 0 0 0 4px rgba(47,99,255,.12);
+    }
+
+    .password-wrap{
+      position:relative;
+    }
+    .toggle-eye{
+      position:absolute;
+      right: 10px;
+      top:50%;
+      transform: translateY(-50%);
+      border:0;
+      background: transparent;
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      display:grid;
+      place-items:center;
+      color: #6b7280;
+      cursor:pointer;
+    }
+    .toggle-eye:hover{ background: rgba(0,0,0,.05); }
+
+    .primary{
+      width:100%;
+      border:0;
+      border-radius: 999px;
+      padding: 11px 14px;
+      background: #8b5cf6;
+      color:#fff;
+      font-weight: 700;
+      margin-top: 6px;
+      transition: background .2s ease, transform .05s ease, box-shadow .2s ease;
+    }
+    .primary:hover{
+      background: #997cde;
+      box-shadow: 0 10px 22px rgba(47,99,255,.22);
+    }
+    .primary:active{ transform: scale(.99); }
+
+    .links{
+      text-align:center;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+    .links a{
+      color: var(--muted);
+      text-decoration:none;
+    }
+    .links a:hover{ text-decoration: underline; }
+
+    .bottom{
+      text-align:center;
+      margin-top: 14px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .bottom a{
+      color: #8b5cf6;
+      text-decoration:none;
+      font-weight: 600;
+    }
+    .bottom a:hover{ text-decoration: underline; }
+
+    .hint{
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--muted);
+      text-align:center;
+      display:none;
+    }
+    .hint.show{ display:block; }
