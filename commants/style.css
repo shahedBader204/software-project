@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    font-family: Inter, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f7f8fc;
+}
+
+.reviews {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.reviews h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #555;
+    margin-bottom: 50px;
+}
+
+.grid {
+    max-width: 1100px;
+    margin: auto;
+    column-count: 3;
+    column-gap: 30px;
+}
+
+
+.card {
+    position: relative;
+    background: #fff;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    text-align: left;
+    height: auto; /* مهم */
+    break-inside: avoid;
+    margin-bottom: 30px;
+}
+
+.card p {
+    margin-bottom: 12px;
+}
+
+.platform {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google {
+    background: #4285F4;
+}
+
+.facebook {
+    background: #1877f2;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.user img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.user h4 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.stars {
+    color: #fbbc04;
+    font-size: 14px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.card a {
+    color: #6c63ff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.platform {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 14px rgba(0,0,0,.08);
+}
+
+/* Google */
+.platform.google {
+    background: #fff;
+}
+
+/* Facebook */
+.platform.facebook {
+    background:  #eaebed;
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

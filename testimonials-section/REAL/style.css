@@ -1,0 +1,162 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, rgb(191, 177, 219), #9a7cde);
+  color: #ffffff;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+
+/* Section */
+.timeline-section {
+  padding: 140px 80px;
+}
+
+/* Title */
+.section-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 50;
+  margin-bottom: 120px;
+}
+
+.section-title span {
+  font-weight: 50;
+}
+
+/* Timeline wrapper */
+.timeline-wrapper {
+  position: relative;
+  max-width: 1100px;
+  margin: auto;
+}
+
+
+.timeline-indicator {
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+/* الدائرة */
+.timeline-indicator .dot {
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #b98cff;
+}
+
+/* الخط المتقطّع الحقيقي */
+.timeline-indicator .line {
+  width: 2px;
+  height: 0; /* مخفي بالبداية */
+  margin-top: 8px;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #b98cff 0px,
+    #b98cff 6px,
+    transparent 6px,
+    transparent 14px
+  );
+  background-repeat: repeat-y;
+}
+
+
+
+/* Vertical line */
+.timeline-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(#b98cff, transparent);
+  transform: translateX(-50%);
+}
+
+/* Timeline item */
+.timeline-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 160px;
+}
+
+/* Reverse layout */
+.timeline-item.reverse {
+  direction: rtl;
+}
+
+.timeline-item.reverse .content {
+  direction: ltr;
+}
+
+/* Media */
+.media img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 22px;
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.45);
+}
+
+/* Content */
+.content h3 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.content p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #e8e2fa;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .timeline-section {
+    padding: 100px 24px;
+  }
+
+  .timeline-line {
+    display: none;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .timeline-item.reverse {
+    direction: ltr;
+  }
+
+  .media img {
+    max-width: 90%;
+  }
+}
